@@ -8,20 +8,23 @@ const { getStore, storeUser } = require('./utils/file');
 const readline = require('./utils/readline')
 
 const rl = readline.createInterface()
+let count = 0
  async function qiandao() {
-   
+   console.log(count)
+    count +=1
+    
   let params;
   // 本地与登录之间的抉择
   {
     // 打印本地用户列表，并返回用户数量
     let userLength = printUsers()
     // let input = await readline.question(rl, '[ 若使用列表中用户，输入前面的序号; 若使用账号和密码登录，输入n ]\n输入：')
-    let input = '0'
+    let input = '1'
 
     // 使用新用户登录
     if (input !== '0') {
       // let uname = await readline.question(rl, '手机号：')
-      let uname = 19176683443
+      let uname = 18165508505
       // let password = await readline.question(rl, '密码：')
       let password = '12345qwert'
       // 登录获取各参数
@@ -102,4 +105,4 @@ const rl = readline.createInterface()
 }
 qiandao()
 // console.log(qiandao)
-const timer =setInterval(qiandao,30000)
+const timer =setInterval(qiandao,55000)
